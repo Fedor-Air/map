@@ -18,9 +18,9 @@ class MapParams:
         print(pygame.KEYUP, pygame.MOUSEBUTTONUP)
         print(event.type)
         if event.type == pygame.KEYUP:
-            if event.key == pygame.K_KP9 and self.scale < 19:    # K_KP9, K_PAGEUP
+            if event.key == pygame.K_PAGEUP and self.scale < 19:    # K_KP9, K_PAGEUP
                 self.scale += 1
-            elif event.key == pygame.K_KP3 and self.scale > 2:    # K_KP3, K_PAGEDOWN
+            elif event.key == pygame.K_PAGEDOWN and self.scale > 2:    # K_KP3, K_PAGEDOWN
                 self.scale -= 1
             elif event.key == pygame.K_LEFT:
                 self.coord[0] -= (20 - self.scale) ** 2 / 120
